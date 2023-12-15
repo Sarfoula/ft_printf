@@ -12,15 +12,6 @@
 
 #include "../ft_printf.h"
 
-int	ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 static void	check_arg(char c, va_list arg, int *count, int fd)
 {
 	if (c == 'c')

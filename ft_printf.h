@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 11:10:16 by yallo             #+#    #+#             */
-/*   Updated: 2023/12/14 16:10:25 by yallo            ###   ########.fr       */
+/*   Updated: 2023/12/15 13:24:42 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,5 @@ void	ft_putchar(int c, int *count, int fd);
 void	ft_putnbr_base(long long unsigned int nbr, char *base, int *count, int fd);
 void	ft_putnbr(int nbr, int *count, int fd);
 void	ft_putstr(char *s, int *count, int fd);
-int	ft_strlen(char *str);
 
 #endif
