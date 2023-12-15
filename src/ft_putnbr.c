@@ -6,7 +6,7 @@
 /*   By: yallo <yallo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 01:06:37 by yallo             #+#    #+#             */
-/*   Updated: 2023/10/20 01:04:43 by yallo            ###   ########.fr       */
+/*   Updated: 2023/12/14 16:09:27 by yallo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	ft_putnbr(int nbr, int *count, int fd)
 		ft_putchar('-', count, fd);
 		nbr = -nbr;
 	}
-	ft_putnbr_base(nbr, 10, "0123456789", count, fd);
+	ft_putnbr_base(nbr, "0123456789", count, fd);
 }

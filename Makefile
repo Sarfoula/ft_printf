@@ -1,21 +1,21 @@
 NAME = libftprintf.a
 
-CC = gcc
+CC = cc
 FLAGS = -Wall -Wextra -Werror
 
-SRC_DIR = src
-OBJ_DIR = obj
+SRC_DIR = src/
+OBJ_DIR = obj/
 
 HEADER = ft_printf.h
-SRC = $(wildcard $(SRC_DIR)/*.c)
-OBJ = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
+SRC = ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_putnbr_base.c
+OBJ = $(SRC:%.c=$(OBJ_DIR)%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ) Makefile
+$(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADER) Makefile | $(OBJ_DIR)
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(HEADER) Makefile | $(OBJ_DIR)
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(OBJ_DIR):
